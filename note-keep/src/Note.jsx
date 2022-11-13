@@ -1,4 +1,5 @@
 import React from "react";
+
 const Note = (props) => {
  
    const deleteNote = () =>{
@@ -7,13 +8,14 @@ const Note = (props) => {
   return (
     <>
     <div className="note">
-<h1>{props.title}</h1>
-<br/>
- <p> {props.content}</p>
- <button className="btn -deleteIcon" onClick={deleteNote}>
- <i className="fa-solid fa-trash"></i>
-</button>
+    <h1>{props.title}</h1>
+    <br/>
+    <p> {props.content}</p>
+    <button className="deleteIcon" onClick={deleteNote}>
+      X
+    </button>
 </div>
+
     </>
   );
 };

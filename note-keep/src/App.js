@@ -7,8 +7,8 @@ import './App.css';
 
 function App() {
   const [addItem,setAddItem]=useState([]);
-  const addNote=(note)=>{
-    // alert("clicked")
+  const addNote = (note) => {
+    // alert("clicked");
     setAddItem((prevData)=>{
       return [...prevData,note];
     });
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <CreateNote passNode={addNote} />
+      <CreateNote passNote={addNote} />
      {addItem.map((val,index)=>{
         return <Note 
         key={index}
