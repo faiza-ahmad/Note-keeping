@@ -1,14 +1,46 @@
-import React from "react";
-// import Button from '@mui/material/Button';
-// import AddIcon from '@material-ui/icon/Add';
-const CreateNote = () => {
+import React, { useState } from "react";
+
+const CreateNote = (props) => {
+ const [note,setNote]=useState({
+   title:"",
+   content:"",
+ });
+    const InputEvent =(event)=>{
+      const {name,value}=event.target;
+      setNote((prevData) =>{
+        return{
+          ...prevData,
+          [name] :value,
+        };
+      });
+    }
+    const addEvent=()=>{
+      props.passNote(note);
+      setNote({
+        title:"",
+        content:"",
+      })
+    };
+ 
   return (
     <>
     <div className="main_note">
         <form>
-            <input type="text" placeholder="Title" />
-            <textarea rows="" column="" placeholder="Write your notes..."/>
-            <button className="btn">+</button>
+            <input type="text" 
+            name="title"
+            value={note.title} 
+            onChange={InputEvent}
+             placeholder="Title" />
+            <textarea 
+            name="content"
+            rows="" 
+            column=""
+             value={note.content}
+            onChange={InputEvent}
+            placeholder="Write your notes..."/>
+            
+            <button onClick={addEvent}
+            className="plus_sign">+</button>
         </form>
     </div>
     </>
