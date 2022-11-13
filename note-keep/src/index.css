@@ -27,7 +27,7 @@ code {
   align-items: center;
   padding-left: 50px;
   color: white;
-  box-shadow: 5px 3px 15px -5px rgba(0,0,0,0.1);
+  box-shadow: 5px 3px 15px -5px rgba(0,0,0,0.8);
 }
 textarea{
   width: 100%;
@@ -53,7 +53,7 @@ form{
   min-height: 50px;
   color: #ecf0f1;
   padding: 15px 10px 5px 10px;
-  box-shadow: 3px 5px 15px -5px rgba(0,0,0,0.1);
+  box-shadow: 3px 5px 15px -5px rgba(0,0,0,0.8);
   border-radius: 10px;
   position: relative;
 }
@@ -73,7 +73,7 @@ form{
   left: 400px;
   cursor: pointer;
   background-color: #fff !important;
-  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.1);
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
   border-radius: 50% !important;
 }
 .MuiButton-root:hover{
@@ -113,6 +113,7 @@ footer{
   width: 100%;
   position: absolute;
   bottom: 0;
+  background-color:#f4b400;
 }
 .note{
   background: #fff;
@@ -144,4 +145,15 @@ footer{
 .note h1{
   font-size: 1.1em;
   margin-bottom: 6px;
+}
+.main_note button{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    font-size: 2rem;
+    background-color: #f4b400;
+    color: #ccc;
+    border: none;
+    margin-right: 0;
+    align-items: flex-end;
 }
