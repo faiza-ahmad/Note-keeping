@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #202124;
 }
 
 code {
@@ -21,7 +22,7 @@ code {
 .header{
   width: 100%;
   line-height: 100px;
-  background-color: yellow;
+  /* background-color: yellow; */
   display: flex;
   justify-content: start;
   align-items: center;
@@ -60,7 +61,7 @@ form{
  .plus_sign{
   font-size: 45px !important;
   font-weight: 700;
-  color: yellow;
+  color: white;
   cursor: pointer;
   z-index: 222;
   background: transparent;
@@ -73,12 +74,13 @@ form button{
   bottom: -28px;
   left: 400px;
   cursor: pointer;
-  background-color: #fff !important;
+  background-color: #202124 !important;
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
   border-radius: 50% !important;
+  border: 1px white solid;
 }
 form button:hover{
-  background: #f4b400 !important;
+  background: #797877 !important;
 }
 form button:hover .plus_sign{
   color: #fff;
@@ -91,10 +93,10 @@ form button:hover .plus_sign{
 }
 
 .my_notes h1{
-  color: #34495e;
+  color: #a2a4a5;
 }
 .my_notes p{
-  color: grey;
+  color: rgb(231, 231, 231);
 }
 
 .deleteIcon{
@@ -108,23 +110,22 @@ form button:hover .plus_sign{
   height: 30px;
   position: absolute;
   cursor: pointer;
-  color: red;
-  background-color: #fff !important;
+  color: rgb(161, 161, 161);
+  background-color: rgb(99, 98, 98) !important;
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
   border-radius: 50% !important;
 }
-
-
 
 footer{
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color:#f4b400;
+  background-color:#5c5c5c;
 }
 .note{
-  background: #fff;
+  background: rgb(66, 66, 66);
   border-radius: 7px;
+  color: #ccc;
   /* box-shadow: 0 2px 5px #ccc; */
   box-shadow: 3px 5px 15px -5px rgba(0,0,0,0.8);
   padding: 10px;

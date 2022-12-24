@@ -1,42 +1,33 @@
-import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import CreateNote from "./CreateNote";
-import Note from "./Note";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Sidebar from "./Components/Sidebar";
+import Trash from "./Components/Trash";
+import Archieve from "./Components/Archieve";
+import Label from "./Components/Label";
+import Reminder from "./Components/Reminder";
+import './Components/Side.css';
+import Side from "./Components/Side";
+import Header from "./Components/Header";
+import Footer from './Components/Footer';
 import './App.css';
-
+import './Components/Side.css';
 function App() {
-  const [addItem,setAddItem]=useState([]);
-  const addNote = (note) => {
-    // alert("clicked");
-    setAddItem((prevData)=>{
-      return [...prevData,note];
-    });
-
-  };
-  const onDelete=(id)=>{
-      setAddItem((olddata) => 
-      olddata.filter((currdata,indx)=>{
-        return indx!==id;
-      })
-      )
-  }
-  return (
-    <div className="App">
-      <Header/>
-      <CreateNote passNote={addNote} />
-     {addItem.map((val,index)=>{
-        return <Note 
-        key={index}
-        id={index}
-        title={val.title}
-        content={val.content}
-        deleteItem={onDelete}
-        />
-      })}
-      <Footer/>
-    </div>
-  );
+    return ( 
+        <>
+        <Header/>
+        {/* <Sidebar/> */}
+        <BrowserRouter>
+        <Routes>
+            <Route index element={<Sidebar/>}/>
+                <Route path="*" element={<Side/>}/>
+                <Route path="Reminders" element={<Reminder/>} />
+                 <Route path="edit" element={<Label/>} />
+                 <Route path="archive" element={<Archieve/>} />
+                 <Route path="trash" element={<Trash/>} />
+        </Routes>
+        </BrowserRouter>
+        <Footer/>
+        </>
+     );
 }
 
 export default App;

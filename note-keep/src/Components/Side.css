@@ -1,0 +1,29 @@
+.archive ,.trash , .remind , .label{
+    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.708);
+    font-size: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.r {
+    display: flex;
+    margin-top: 20px;
+}
+.r p{
+    margin-top: 18%;
+}
+.links{
+    text-decoration: none;
+    color: #ccc;
+    margin-left: 10%;
+}
+.sidebar li{
+    size: 25px;
+    height: 25px;
+}
+.links:active{
+        width: 10rem;
+        border-radius: 25px;
+        background-color: #41331C;
+    }
