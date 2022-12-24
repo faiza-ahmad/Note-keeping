@@ -23,6 +23,7 @@ function App() {
                  <Route path="edit" element={<Label/>} />
                  <Route path="archive" element={<Archieve/>} />
                  <Route path="trash" element={<Trash/>} />
+                 
         </Routes>
         </BrowserRouter>
         <Footer/>

@@ -27,3 +27,7 @@
         border-radius: 25px;
         background-color: #41331C;
     }
+    nav{
+        height: 100vh;
+        /* background-color: #ccc; */
+    }

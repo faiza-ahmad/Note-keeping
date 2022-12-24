@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 const CreateNote = (props) => {
 const [expand,setExpand]=useState()
 
@@ -17,6 +16,14 @@ const [expand,setExpand]=useState()
       });
     };
     const addEvent=(event)=>{
+      if(!note.title || !note.content){
+        alert("Field Could Not Be Empty");
+        // return;
+        // <Alert trigger={true}>
+        //   Field Could not be Empty 
+        // </Alert>
+        return;
+      }
       event.preventDefault();
       props.passNote(note);
       setNote({
@@ -25,14 +32,14 @@ const [expand,setExpand]=useState()
       });
     };
  const expandIt = () =>{
-      setExpand(true);
+      setExpand(false);
  }
  const btoNormal = () =>{
-  setExpand(false);
+  setExpand(true);
 }
   return (
     <>
-    <div className="main_note" onDoubleClick={btoNormal}>
+    <div className="main_note" >
         <form>
            { expand?
             <input type="text" 
@@ -49,12 +56,13 @@ const [expand,setExpand]=useState()
             onChange={InputEvent}
             placeholder="Write your notes..."
             onClick={expandIt}
+            onDoubleClick={btoNormal}
             autoComplete="off"
             >
             </textarea>
-            <button onClick={addEvent} className="plus_sign">
+          { expand ? <button onClick={addEvent} className="plus_sign">
                 +
-            </button>
+            </button> : null }
         </form>
     </div>
     </>

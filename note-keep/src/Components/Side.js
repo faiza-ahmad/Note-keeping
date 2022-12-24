@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import CreateNote from "./CreateNote";
 import Note from "./Note";
 import Sidebar from "./Sidebar";
-
+const getLocaleStorage = () => {
+  let list = localStorage.getItem("lists");
+  if (list) {
+    return JSON.parse(localStorage.getItem("lists"));
+  } else {
+    return [];
+  }
+};
 function Side() {
-  const [addItem, setAddItem] = useState([]);
+  
+  const [addItem, setAddItem] = useState(getLocaleStorage());
   const addNote = (note) => {
     // alert("clicked");
     setAddItem((prevData) => {
@@ -18,11 +26,15 @@ function Side() {
       })
     );
   };
+  useEffect(() => {
+    localStorage.setItem("lists", JSON.stringify(addItem))
+  }, [addItem]);
   return (
     <div>
       <div className="body">
         <Sidebar />
       </div>
+      <div>
       <CreateNote passNote={addNote} />
       {addItem.map((val, index) => {
         return (
@@ -35,7 +47,7 @@ function Side() {
           />
         );
       })}
-      <br />
+      </div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ code {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-
+  color: #ccc;
 }
 .header{
   width: 100%;
@@ -132,6 +132,7 @@ footer{
   width: 240px;
   margin: 16px;
   float: left;
+
 }
 .note .deleteIcon{
   position: relative;
