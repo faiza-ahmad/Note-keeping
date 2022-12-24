@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Note-keeping/static/css/main.7c18cd00.css",
-    "main.js": "/Note-keeping/static/js/main.57094afe.js",
-    "static/js/787.584325c6.chunk.js": "/Note-keeping/static/js/787.584325c6.chunk.js",
-    "index.html": "/Note-keeping/index.html",
-    "main.7c18cd00.css.map": "/Note-keeping/static/css/main.7c18cd00.css.map",
-    "main.57094afe.js.map": "/Note-keeping/static/js/main.57094afe.js.map",
-    "787.584325c6.chunk.js.map": "/Note-keeping/static/js/787.584325c6.chunk.js.map"
+    "main.css": "/Google-keep/static/css/main.7c18cd00.css",
+    "main.js": "/Google-keep/static/js/main.89a3b3b2.js",
+    "static/js/787.584325c6.chunk.js": "/Google-keep/static/js/787.584325c6.chunk.js",
+    "index.html": "/Google-keep/index.html",
+    "main.7c18cd00.css.map": "/Google-keep/static/css/main.7c18cd00.css.map",
+    "main.89a3b3b2.js.map": "/Google-keep/static/js/main.89a3b3b2.js.map",
+    "787.584325c6.chunk.js.map": "/Google-keep/static/js/787.584325c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c18cd00.css",
-    "static/js/main.57094afe.js"
+    "static/js/main.89a3b3b2.js"
   ]
 }
