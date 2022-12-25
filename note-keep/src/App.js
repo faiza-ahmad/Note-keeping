@@ -15,7 +15,7 @@ function App() {
         <>
         <Header/>
         {/* <Sidebar/> */}
-        <BrowserRouter basename="/Note-keeping/">
+        <BrowserRouter basename="/Note-keeping/note-keep">
         <Routes>
             <Route index element={<Sidebar/>}/>
                 <Route path="*" element={<Side/>}/>
